@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.3">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Техническая поддержка</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="КнопкаСохранитьВФайлик" id="97">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьТехИнформацию</CommandName>
+				<Picture>
+					<xr:Ref>StdPicture.Write</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить тех. информацию</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="КнопкаСохранитьВФайликРасширеннаяПодсказка" id="122"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПомощь" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Помощь</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаПомощьРасширеннаяПодсказка" id="123"/>
+			<ChildItems>
+				<LabelDecoration name="НадписьТелефонТехподдержки" id="3">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="style:NormalTextFont" height="10" kind="StyleItem"/>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="НадписьТелефонТехподдержкиКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="НадписьТелефонТехподдержкиРасширеннаяПодсказка" id="124"/>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьУдаленноеПодключениеVNC" id="88">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Удаленное подключение VNC</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="НадписьУдаленноеПодключениеVNCКонтекстноеМеню" id="89"/>
+					<ExtendedTooltip name="НадписьУдаленноеПодключениеVNCРасширеннаяПодсказка" id="125"/>
+					<Events>
+						<Event name="Click">НадписьУдаленноеПодключениеVNCНажатие</Event>
+					</Events>
+				</LabelDecoration>
+				<LabelDecoration name="НадписьПровестиДиагностику" id="91">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Провести диагностику</v8:content>
+						</v8:item>
+					</Title>
+					<Hyperlink>true</Hyperlink>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ContextMenu name="НадписьПровестиДиагностикуКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="НадписьПровестиДиагностикуРасширеннаяПодсказка" id="126"/>
+				</LabelDecoration>
+				<LabelDecoration name="Декорация3" id="94">
+					<ContextMenu name="Декорация3КонтекстноеМеню" id="95"/>
+					<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="127"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТехническаяИнформация" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Техническая информация</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="ГруппаТехническаяИнформацияРасширеннаяПодсказка" id="128"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаГоризонтальнаяГруппировка" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа горизонтальная группировка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа горизонтальная группировка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаГоризонтальнаяГруппировкаРасширеннаяПодсказка" id="129"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНаименованиеСвойства" id="14">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа наименование свойства</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа наименование свойства</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНаименованиеСвойстваРасширеннаяПодсказка" id="130"/>
+							<ChildItems>
+								<LabelDecoration name="НадписьВерсияМодуляЗаголовок" id="18">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Версия модуля:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьВерсияМодуляЗаголовокКонтекстноеМеню" id="19"/>
+									<ExtendedTooltip name="НадписьВерсияМодуляЗаголовокРасширеннаяПодсказка" id="131"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьВерсияКомпонентыЗаголовок" id="24">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Версия компоненты:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьВерсияКомпонентыЗаголовокКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="НадписьВерсияКомпонентыЗаголовокРасширеннаяПодсказка" id="132"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьВерсияОСЗаголовок" id="30">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Версия ОС:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьВерсияОСЗаголовокКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="НадписьВерсияОСЗаголовокРасширеннаяПодсказка" id="133"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьтипПлатформыЗаголовок" id="36">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Тип платформы:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьтипПлатформыЗаголовокКонтекстноеМеню" id="37"/>
+									<ExtendedTooltip name="НадписьтипПлатформыЗаголовокРасширеннаяПодсказка" id="134"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьВерсияПлатформыЗаголовок" id="42">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Версия платформы:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьВерсияПлатформыЗаголовокКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="НадписьВерсияПлатформыЗаголовокРасширеннаяПодсказка" id="135"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьВидКлиентаЗаголовок" id="48">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вид клиента:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьВидКлиентаЗаголовокКонтекстноеМеню" id="49"/>
+									<ExtendedTooltip name="НадписьВидКлиентаЗаголовокРасширеннаяПодсказка" id="136"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьСтрокаСоединенияЗаголовок" id="54">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Строка соединения:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьСтрокаСоединенияЗаголовокКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="НадписьСтрокаСоединенияЗаголовокРасширеннаяПодсказка" id="137"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьМодульИнтеграцииЗаголовок" id="60">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Модуль интеграции:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьМодульИнтеграцииЗаголовокКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="НадписьМодульИнтеграцииЗаголовокРасширеннаяПодсказка" id="138"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьПодключаемыйМодульЗаголовок" id="66">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подключаемый модуль:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьПодключаемыйМодульЗаголовокКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="НадписьПодключаемыйМодульЗаголовокРасширеннаяПодсказка" id="139"/>
+								</LabelDecoration>
+								<LabelDecoration name="НадписьКонфигурация" id="72">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Конфигурация:</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="НадписьКонфигурацияКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="НадписьКонфигурацияРасширеннаяПодсказка" id="140"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаЗначениеСвойства" id="16">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа значение свойства</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа значение свойства</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗначениеСвойстваРасширеннаяПодсказка" id="141"/>
+							<ChildItems>
+								<InputField name="ВерсияОбработки" id="99">
+									<DataPath>ВерсияОбработки</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>false</ChoiceButton>
+									<BackColor>style:FormBackColor</BackColor>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="ВерсияОбработкиКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ВерсияОбработкиРасширеннаяПодсказка" id="142"/>
+								</InputField>
+								<InputField name="ВерсияКомпоненты" id="102">
+									<DataPath>ВерсияКомпоненты</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>false</ChoiceButton>
+									<BackColor>style:FormBackColor</BackColor>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="ВерсияКомпонентыКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ВерсияКомпонентыРасширеннаяПодсказка" id="143"/>
+								</InputField>
+								<InputField name="ВерсияОперационнойСистемы" id="105">
+									<DataPath>ВерсияОперационнойСистемы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>false</ChoiceButton>
+									<BackColor>style:FormBackColor</BackColor>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="ВерсияОперационнойСистемыКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ВерсияОперационнойСистемыРасширеннаяПодсказка" id="144"/>
+								</InputField>
+								<InputField name="ТипПлатформы" id="111">
+									<DataPath>ТипПлатформы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>false</ChoiceButton>
+									<BackColor>style:FormBackColor</BackColor>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="ТипПлатформыКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ТипПлатформыРасширеннаяПодсказка" id="145"/>
+								</InputField>
+								<InputField name="ВерсияПлатформы" id="108">
+									<DataPath>ВерсияПлатформы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>false</ChoiceButton>
+									<BackColor>style:FormBackColor</BackColor>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="ВерсияПлатформыКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ВерсияПлатформыРасширеннаяПодсказка" id="146"/>
+								</InputField>
+								<InputField name="ВидКлиента" id="120">
+									<DataPath>ВидКлиента</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>false</ChoiceButton>
+									<BackColor>style:FormBackColor</BackColor>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="ВидКлиентаКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="ВидКлиентаРасширеннаяПодсказка" id="147"/>
+								</InputField>
+								<InputField name="СтрокаСоединения" id="117">
+									<DataPath>СтрокаСоединения</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<ChoiceButton>false</ChoiceButton>
+									<BackColor>style:FormBackColor</BackColor>
+									<BorderColor>style:FormBackColor</BorderColor>
+									<ContextMenu name="СтрокаСоединенияКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="СтрокаСоединенияРасширеннаяПодсказка" id="148"/>
+								</InputField>
+								<LabelField name="ИмяМодуляИнтеграции" id="114">
+									<DataPath>ИмяМодуляИнтеграции</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<Hiperlink>true</Hiperlink>
+									<BackColor>style:FormBackColor</BackColor>
+									<ContextMenu name="ИмяМодуляИнтеграцииКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="ИмяМодуляИнтеграцииРасширеннаяПодсказка" id="149"/>
+									<Events>
+										<Event name="Click">ИмяМодуляИнтеграцииНажатие</Event>
+									</Events>
+								</LabelField>
+								<LabelDecoration name="НадписьПодключаемыйМодульЗначение" id="69">
+									<ContextMenu name="НадписьПодключаемыйМодульЗначениеКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="НадписьПодключаемыйМодульЗначениеРасширеннаяПодсказка" id="150"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Поле1" id="75">
+			<DataPath>ИнформацияОКонфигурации</DataPath>
+			<DefaultItem>true</DefaultItem>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<MultiLine>true</MultiLine>
+			<ChoiceButton>false</ChoiceButton>
+			<ClearButton>false</ClearButton>
+			<SpinButton>false</SpinButton>
+			<OpenButton>false</OpenButton>
+			<ContextMenu name="Поле1КонтекстноеМеню" id="76"/>
+			<ExtendedTooltip name="Поле1РасширеннаяПодсказка" id="151"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.Модуль_ДиадокУФ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ВерсияОбработки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВерсияКомпоненты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия компоненты</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ИнформацияОКонфигурации" id="4">
+			<Type/>
+		</Attribute>
+		<Attribute name="ИмяМодуляИнтеграции" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя модуля интеграции</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТелефонТехподдержки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Телефон техподдержки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВерсияОперационнойСистемы" id="7">
+			<Type/>
+		</Attribute>
+		<Attribute name="ВерсияПлатформы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия платформы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТипПлатформы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип платформы</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="СтрокаСоединения" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка соединения</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВидКлиента" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид клиента</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УдаленноеПодключениеVNC" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удаленное подключение VNC</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удаленное подключение VNC</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ПровестиДиагностику" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести диагностику</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Провести диагностику</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="СохранитьТехИнформацию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить тех информацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить тех информацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьТехИнформацию</Action>
+		</Command>
+	</Commands>
+</Form>
